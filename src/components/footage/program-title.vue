@@ -1,6 +1,6 @@
 <template>
   <XyzTransition xyz="fade left-100%">
-    <div class="main" v-if="getEnabled('programtitle/enabled', true)">
+    <div class="main" v-if="getAttr('program-title', 'enabled')">
       <v-card rounded="0" style="height: 160px" flat class="bgnews pa-3">
         <v-row
           style="height: 100%"
@@ -27,8 +27,8 @@
 </template>
 
 <script setup>
-import { stateStore } from "@/store/state";
-const { getEnabled } = stateStore();
+import { stateStore } from "@/store/Display/state";
+const { getAttr } = stateStore();
 </script>
 
 <style scoped>

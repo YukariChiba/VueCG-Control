@@ -1,16 +1,16 @@
 <template>
   <div>
-    <tv-corner-logo />
-    <tv-bottom-bar />
-    <tv-program-title />
     <tv-program-topic />
     <tv-video-tag />
+    <tv-program-title />
+    <tv-bottom-bar />
     <tv-test-module />
+    <tv-corner-logo />
   </div>
 </template>
 
 <script>
-import { socketStore } from "../store/socket";
+import { socketStore } from "../../store/Display/socket";
 
 export default {
   mounted() {

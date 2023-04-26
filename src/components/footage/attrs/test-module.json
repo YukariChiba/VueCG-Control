@@ -1,0 +1,13 @@
+{
+  "title": "Test Module",
+  "descr": "Just a simple test module",
+  "data": {
+    "enabled": {
+      "default": false,
+      "descr": "Enable Test Module"
+    },
+    "test": {
+      "default": "test"
+    }
+  }
+}

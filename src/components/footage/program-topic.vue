@@ -1,16 +1,16 @@
 <template>
   <XyzTransition xyz="fade left-100%">
-    <div class="main" v-if="getEnabled('programtopic/enabled', true)">
+    <div class="main" v-if="getAttr('program-topic', 'enabled')">
       <v-card rounded="0" style="height: 160px" flat class="bgnews pa-3">
         <v-row style="height: 100%" class="ma-0 ml-6" align="center">
           <v-col cols="2" class="mb-2"> </v-col>
           <v-col cols="auto">
             <p style="font-size: 60px; line-height: 60px">
-              {{ getAttr("programtopic/title", "this is title") }}
+              {{ getAttr("program-topic", "title", "this is title") }}
             </p>
             <v-divider class="my-2" :thickness="4" />
             <p style="font-size: 40px; line-height: 40px">
-              {{ getAttr("programtopic/subtitle", "this is subtitle") }}
+              {{ getAttr("program-topic", "subtitle", "this is subtitle") }}
             </p>
           </v-col>
         </v-row>
@@ -20,8 +20,8 @@
 </template>
 
 <script setup>
-import { stateStore } from "@/store/state";
-const { getAttr, getEnabled } = stateStore();
+import { stateStore } from "@/store/Display/state";
+const { getAttr } = stateStore();
 </script>
 
 <style scoped>

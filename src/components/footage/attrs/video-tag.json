@@ -1,0 +1,11 @@
+{
+  "title": "Video Tag",
+  "data": {
+    "enabled": {
+      "default": "true"
+    },
+    "text": {
+      "default": "LIVE"
+    }
+  }
+}

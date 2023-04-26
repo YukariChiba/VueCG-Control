@@ -1,0 +1,14 @@
+{
+  "title": "Bottom Bar",
+  "data": {
+    "enabled": {
+      "default": true
+    },
+    "weather": {
+      "default": true
+    },
+    "news": {
+      "default": "12312313213132132321321312323123123123123123123"
+    }
+  }
+}

@@ -1,5 +1,5 @@
 <template>
-  <div class="main" v-if="getEnabled('bottombar/enabled', true)">
+  <div class="main" v-if="getAttr('bottom-bar', 'enabled')">
     <v-row class="mx-0" style="height: 60px" no-gutter>
       <v-col class="display-time text-center" cols="1">
         <div style="height: 60px; width: 100%; font-size: 30px">
@@ -8,26 +8,16 @@
       </v-col>
       <v-col cols="10" class="display-news">
         <MarqueeText
-          :key="
-            getAttr(
-              'bottombar/news',
-              'this is news marquee, it\'s long so i must write more words in this placeholder'
-            )
-          "
+          :key="getAttr('bottom-bar', 'news')"
           class="mx-4"
           style="font-size: 30px"
         >
-          {{
-            getAttr(
-              "bottombar/news",
-              "this is news marquee, it's long so i must write more words in this placeholder"
-            )
-          }}
+          {{ getAttr("bottom-bar", "news") }}
         </MarqueeText>
       </v-col>
       <v-col
         cols="1"
-        v-if="getAttr('bottombar/weather', true)"
+        v-if="getAttr('bottom-bar', 'weather', true)"
         class="display-tag"
       >
         <v-window
@@ -61,8 +51,8 @@
 </template>
 
 <script setup>
-import { stateStore } from "@/store/state";
-const { getAttr, getEnabled } = stateStore();
+import { stateStore } from "@/store/Display/state";
+const { getAttr } = stateStore();
 import MarqueeText from "vue-marquee-text-component";
 import { ref } from "vue";
 import axios from "axios";

@@ -1,5 +1,5 @@
 <template>
-  <div class="main" v-if="getEnabled('cornerlogo/enabled', true)">
+  <div class="main" v-if="getAttr('corner-logo', 'enabled', true)">
     <v-card flat theme="dark">
       <v-row no-gutter class="glow">
         <v-col class="pr-0">
@@ -8,7 +8,7 @@
         <v-col style="width: 20px"></v-col>
         <v-col class="pl-0 pr-6" style="align-self: center">
           <span style="font-size: 50px; text-shadow: #000 0px 0px 2px">{{
-            getAttr("cornerlogo/text", "TV")
+            getAttr("corner-logo", "text")
           }}</span>
         </v-col>
       </v-row>
@@ -18,8 +18,8 @@
 
 <script setup>
 import logo from "@/assets/footage/logo.png";
-import { stateStore } from "@/store/state";
-const { getAttr, getEnabled } = stateStore();
+import { stateStore } from "@/store/Display/state";
+const { getAttr } = stateStore();
 </script>
 <style scoped>
 .main {

@@ -1,13 +1,3 @@
 <template>
-  <v-app>
-    <v-main>
-      <router-view />
-    </v-main>
-  </v-app>
+  <router-view />
 </template>
-
-<style>
-.v-application {
-  background-color: unset !important;
-}
-</style>

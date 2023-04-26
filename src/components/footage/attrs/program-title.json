@@ -1,0 +1,8 @@
+{
+  "title": "Program Title",
+  "data": {
+    "enabled": {
+      "default": "true"
+    }
+  }
+}

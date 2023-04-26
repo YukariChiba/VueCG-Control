@@ -14,7 +14,7 @@ export const socketStore = defineStore("socket", {
           break;
         }
         case "set": {
-          stateStore().updateAttr(msg);
+          stateStore().updateAttr(msg.comp, msg.attr, msg.value);
           break;
         }
         case "apply": {

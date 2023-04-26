@@ -1,0 +1,14 @@
+{
+  "title": "Program Topic",
+  "data": {
+    "enabled": {
+      "default": "true"
+    },
+    "title": {
+      "default": "114514"
+    },
+    "subtitle": {
+      "default": "1919810"
+    }
+  }
+}

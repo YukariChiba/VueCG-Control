@@ -1,15 +1,15 @@
 <template>
-  <div class="main" v-if="getEnabled('videotag/enabled', false)">
+  <div class="main" v-if="getAttr('video-tag', 'enabled')">
     <span
       style="font-size: 50px; color: #ffffffcc; text-shadow: #000 0px 0px 2px"
-      >{{ getAttr("videotag/text", "直播 / LIVE") }}</span
+      >{{ getAttr("video-tag", "text") }}</span
     >
   </div>
 </template>
 
 <script setup>
-import { stateStore } from "@/store/state";
-const { getAttr, getEnabled } = stateStore();
+import { stateStore } from "@/store/Display/state";
+const { getAttr } = stateStore();
 </script>
 
 <style scoped>

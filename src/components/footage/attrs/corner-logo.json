@@ -1,0 +1,11 @@
+{
+  "title": "Corner Logo",
+  "data": {
+    "enabled": {
+      "default": true
+    },
+    "text": {
+      "default": "TV"
+    }
+  }
+}

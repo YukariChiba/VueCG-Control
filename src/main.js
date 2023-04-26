@@ -1,14 +1,16 @@
-import App from './App.vue'
+import App from "./App.vue";
 
-import { createApp } from 'vue'
-import { registerPlugins } from '@/plugins'
+import { createApp } from "vue";
+import { registerPlugins } from "@/plugins";
 
-import footageComponents from '@/components/footage'
+import footageComponents from "@/components/footage";
 
-const app = createApp(App)
+import { componentStore } from "./store/component";
 
-registerPlugins(app)
+const app = createApp(App);
 
-footageComponents(app)
+registerPlugins(app);
 
-app.mount('#app')
+componentStore().registerComponents(footageComponents(app));
+
+app.mount("#app");
